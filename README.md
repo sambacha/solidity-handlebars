@@ -4,6 +4,8 @@
 
 ## Solidity DocGen
 
+> [natspec source](https://github.com/snreynolds/solidity-docgen/commit/154b7acf80f120127e4640db6f8a052d96d6c6cc) via @snreynolds
+
 **Documentation generator for smart contract libraries.** Use the inline
 documentation in your Solidity code for generating websites or any sort of
 document.
