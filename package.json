@@ -1,0 +1,30 @@
+{
+  "name": "solidity-handlebars",
+  "version": "1.0.0",
+  "description": "> Handlebar Templates for generating solidity contract interfaces and documentation",
+  "main": "index.js",
+  "files": [
+    "interface-templates/*",
+    "doc-templates/**/*"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambacha/solidity-handlebars.git"
+  },
+  "keywords": [
+    "solidity",
+    "handlebars",
+    "templates",
+    "ethereum"
+  ],
+  "author": "sam bacha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sambacha/solidity-handlebars/issues"
+  },
+  "homepage": "https://github.com/sambacha/solidity-handlebars#readme",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}

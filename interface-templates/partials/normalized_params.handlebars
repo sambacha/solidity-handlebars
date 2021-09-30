@@ -1,0 +1,5 @@
+{{#each inputs}}
+  {{name}}{{#ifEquals 'address' type}}.toLowerCase(){{/ifEquals}}{{#if
+    @last
+  }}{{else}},{{/if}}
+{{/each}}
