@@ -1,6 +1,6 @@
 {
   "name": "solidity-handlebars",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Handlebar Templates for generating solidity contract interfaces and documentation",
   "main": "index.js",
   "files": [
