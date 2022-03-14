@@ -1,0 +1,75 @@
+<!doctype html><head><title>soldoc</title><meta charset="utf-8"></head><body>
+<h2>Contracts</h2>
+{{#each contracts}}
+<h3>{{ty}} {{name}}</h3>
+{{#if title}}{{title}}<p>{{/if}}
+{{#if notice}}{{notice}}<p>{{/if}}
+{{#if dev}}Development note: {{dev}}<p>{{/if}}
+{{#if author}}Author: {{author}}<p>{{/if}}
+<h4>Functions</h4>
+{{#each functions}}
+<h5>{{ty}} {{name}}({{#each params}}{{ty}} {{name}}{{#unless @last}}, {{/unless}}{{/each}})</h5>
+{{visibility}} {{#if is_virtual}}virtual{{/if}} {{#if is_override}}override{{/if}}
+<p>
+{{#if title}}{{title}}<p>{{/if}}
+{{#if notice}}{{notice}}<p>{{/if}}
+{{#if dev}}Development note: {{dev}}<p>{{/if}}
+{{#if author}}Author: {{author}}<p>{{/if}}
+Parameters:<ul>{{#each params}}<li>{{ty}} {{name}} {{#if doc}}<p>{{doc}}{{/if}}{{/each}}</ul>
+Returns:<ul>{{#each returns}}<li>{{ty}} {{name}} {{#if doc}}<p>{{doc}}{{/if}}{{/each}}</ul>
+{{/each}}
+<h4>Variables</h4>
+{{#each variables}}
+<h5>{{#if constants}}constant{{/if}} {{ty}} {{visibility}} {{name}}</h5>
+{{#if title}}{{title}}<p>{{/if}}
+{{#if notice}}{{notice}}<p>{{/if}}
+{{#if dev}}Development note: {{dev}}<p>{{/if}}
+{{#if author}}Author: {{author}}<p>{{/if}}
+{{/each}}
+<h4>Inherited Variables</h4>
+{{#each base_variables}}
+<h5>{{#if constant}}constant{{/if}} {{ty}} {{visibility}} {{name}}</h5>
+Base contract: {{base_contract}}<p>
+{{#if title}}{{title}}<p>{{/if}}
+{{#if notice}}{{notice}}<p>{{/if}}
+{{#if dev}}Development note: {{dev}}<p>{{/if}}
+{{#if author}}Author: {{author}}<p>{{/if}}
+{{/each}}
+{{/each}}
+<h2>Events</h2>
+{{#each events}}
+<h3>{{#if contract}}{{contract}}.{{/if}}{{name}}</h3>
+{{#if title}}{{title}}<p>{{/if}}
+{{#if notice}}{{notice}}<p>{{/if}}
+{{#if dev}}Development note: {{dev}}<p>{{/if}}
+{{#if author}}Author: {{author}}<p>{{/if}}
+Fields:<dl>
+{{#each field}}
+<dt><code>{{ty}} {{#if indexed}}indexed{{/if}}</code> {{name}}</dt>
+{{#if doc}}<dd>{{doc}}</dd>{{/if}}
+{{/each}}</dl>
+Anonymous: {{#if anonymous}}true{{else}}false{{/if}}
+{{/each}}
+<h2>Structs</h2>
+{{#each structs}}
+<h3>{{#if contract}}{{contract}}.{{/if}}{{name}}</h3>
+{{#if title}}{{title}}<p>{{/if}}
+{{#if notice}}{{notice}}<p>{{/if}}
+{{#if dev}}Development note: {{dev}}<p>{{/if}}
+{{#if author}}Author: {{author}}<p>{{/if}}
+Fields:<dl>
+{{#each field}}
+<dt><code>{{ty}}</code> {{name}}</dt>
+{{#if doc}}<dd>{{doc}}</dd>{{/if}}
+{{/each}}</dl>
+{{/each}}
+<h2>Enums</h2>
+{{#each enums}}
+<h3>{{#if contract}}{{contract}}.{{/if}}{{name}}</h3>
+{{#if title}}{{title}}<p>{{/if}}
+{{#if notice}}{{notice}}<p>{{/if}}
+{{#if dev}}Development note: {{dev}}<p>{{/if}}
+{{#if author}}Author: {{author}}<p>{{/if}}
+Values: {{field}}
+{{/each}}
+</body></html>
