@@ -2,6 +2,22 @@
 
 > Handlebar Templates for generating solidity contract interfaces and documentation
 
+## Usage
+
+### Create `.natspec.yaml` file
+
+```yaml
+root: ./
+structure:
+  readme: ./docs/README.md
+  summary: ./docs/SUMMARY.md
+```
+
+- Install SOLC@0.0.0 (version)
+- run node src/index.js
+- ?????
+
+
 ## Solidity DocGen
 
 > [natspec source](https://github.com/snreynolds/solidity-docgen/commit/154b7acf80f120127e4640db6f8a052d96d6c6cc) via @snreynolds
@@ -13,7 +29,7 @@ document.
 The output is completely customizable through Handlebars templates that provide
 easy access to all the metadata of your smart contract.
 
-## Usage
+## Solidity DocGen Documentation
 
 ```sh
 npm install solidity-docgen
