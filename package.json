@@ -1,8 +1,8 @@
 {
   "name": "solidity-handlebars",
-  "version": "1.0.1",
+  "version": 2.0.0-beta.1",
   "description": "Handlebar Templates for generating solidity contract interfaces and documentation",
-  "main": "index.js",
+  "main": "src/index.js",
   "files": [
     "interface-templates/*",
     "doc-templates/**/*"
@@ -24,7 +24,14 @@
     "url": "https://github.com/sambacha/solidity-handlebars/issues"
   },
   "homepage": "https://github.com/sambacha/solidity-handlebars#readme",
+    "dependencies": {
+    "dotenv": "^16.0.0",
+    "shx": "^0.3.4",
+    "solidity-docgen": "0.5.16",
+    "chalk": "^4.1.0"
+    },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "solc": "0.8.13",
+    "prettier": "latest"
   }
 }
